@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Event example</title>
+	</head>
+
+	<body>
+		<p>
+			<div>This is old school (coupled) event handling</div>
+
+			<div>Not cool counter: <span wicket:id="not_cool_counter">not cool</span></div>
+
+			<div><a wicket:id="not_cool_refresh_link">Not cool refresh</a></div>
+		</p>
+
+		<p>
+			<div>This is cool (decoupled) event handling</div>
+
+			<div>Cool counter: <span wicket:id="cool_counter">cool</span></div>
+
+			<div><a wicket:id="cool_refresh_link">cool refresh</a></div>
+		</p>
+
+		<p>
+			<div>This is also super cool (decoupled) event handling but without ugly instanceof</div>
+
+			<div>Super cool counter: <span wicket:id="super_cool_counter">super cool</span></div>
+
+			<div><a wicket:id="super_cool_refresh_link">super cool refresh</a></div>
+		</p>
+
+	</body>
+
+</html>
