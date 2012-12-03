@@ -34,8 +34,6 @@ public class EventPage extends WebPage {
         add(notCoolRefreshLink);
 
 
-
-
         //////////////////////////////////////////////
         // 2. Decoupled
         //////////////////////////////////////////////
@@ -44,7 +42,7 @@ public class EventPage extends WebPage {
             @Override
             public void onEvent(IEvent<?> event) {
                 // react only on RefreshClick event
-                if (event.getPayload() != null && event.getPayload() instanceof RefreshClick) {
+                if (event.getPayload() instanceof RefreshClick) {
                     ((RefreshClick) event.getPayload()).refresh(this);
                 }
             }
