@@ -3,6 +3,10 @@ package com.comsysto.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 
+/**
+ * @author sekibomazic
+ */
+
 @Entity
 @Table(name="T_ACCOUNT")
 public class Account implements Serializable {

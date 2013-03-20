@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+
+    <entry key="menu.home">Home</entry>
+    <entry key="menu.blog">Blog</entry>
+    <entry key="menu.about">About us</entry>
+    <entry key="menu.contact">Contact</entry>
+
+
+    <entry key="post.excerpt.button.readMore">Read More!</entry>
+
+</properties>

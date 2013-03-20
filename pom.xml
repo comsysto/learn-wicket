@@ -43,7 +43,7 @@
 	</licenses>
 
 	<properties>
-		<wicket.version>6.2.0</wicket.version>
+		<wicket.version>6.6.0</wicket.version>
 		<!-- <jetty.version>7.6.3.v20120416</jetty.version> -->
         <jetty.version>8.1.7.v20120910</jetty.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -174,11 +174,34 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <!-- SPRING TEST -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- SPRING_DATA_JPA-->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
             <version>${spring.data.jpa}</version>
         </dependency>
+
+
+        <!-- Query DSL dependencies -->
+        <dependency>
+            <groupId>com.mysema.querydsl</groupId>
+            <artifactId>querydsl-apt</artifactId>
+            <version>${querydsl.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mysema.querydsl</groupId>
+            <artifactId>querydsl-jpa</artifactId>
+            <version>${querydsl.version}</version>
+        </dependency>
+
 
         <!-- H2 Database -->
         <dependency>

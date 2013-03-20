@@ -1,5 +1,6 @@
 package com.comsysto;
 
+import com.comsysto.pages.blog.BlogPage;
 import com.comsysto.pages.eventhandling.eventdispatcher.AnnotationEventDispatcher;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
@@ -32,6 +33,7 @@ public class WicketApplication extends WebApplication {
 		super.init();
 
 		// add your configuration here
+        mountBlogPage();
 
         // spring
         initSpring();
@@ -42,6 +44,10 @@ public class WicketApplication extends WebApplication {
 
     protected void initSpring() {
         getComponentInstantiationListeners().add(new SpringComponentInjector(this, applicationContext));
+    }
+
+    protected void mountBlogPage() {
+        mountPage("/blog", BlogPage.class);
     }
 
 }
