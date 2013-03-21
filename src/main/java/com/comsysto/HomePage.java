@@ -1,6 +1,7 @@
 package com.comsysto;
 
 import com.comsysto.pages.ajax.tagitexample.TagitExamplePage;
+import com.comsysto.pages.blog.RecentEntriesPage;
 import com.comsysto.pages.eventhandling.EventPage;
 import com.comsysto.pages.iterators.AccountsPage;
 import com.comsysto.pages.modal.jqueryalerts.JQueryAlertsModalWindowPage;
@@ -54,6 +55,13 @@ public class HomePage extends WebPage {
             @Override
             public void onClick() {
                 setResponsePage(JQueryAlertsModalWindowPage.class);
+            }
+        });
+
+        add(new Link<Void>("blog") {
+            @Override
+            public void onClick() {
+                setResponsePage(RecentEntriesPage.class);
             }
         });
     }
