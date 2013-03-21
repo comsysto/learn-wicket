@@ -11,4 +11,14 @@
 
     <entry key="post.excerpt.button.readMore">Zum Artikel!</entry>
 
+    <entry key="post.category">Kategorien</entry>
+
+    <entry key="button.saveComment">Speichern</entry>
+
+    <entry key="comment.form.header">Kommentar schreiben</entry>
+    <entry key="comment.form.contentLabel">Kommentar</entry>
+    <entry key="comment.form.contentLabel">Comment</entry>
+    <entry key="comment.form.nameLabel">Name</entry>
+    <entry key="comment.form.emailLabel">Email</entry>
+
 </properties>

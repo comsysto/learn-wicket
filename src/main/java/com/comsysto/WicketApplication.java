@@ -1,6 +1,7 @@
 package com.comsysto;
 
-import com.comsysto.pages.blog.BlogPage;
+import com.comsysto.pages.blog.PostEntryPage;
+import com.comsysto.pages.blog.RecentEntriesPage;
 import com.comsysto.pages.eventhandling.eventdispatcher.AnnotationEventDispatcher;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
@@ -47,7 +48,8 @@ public class WicketApplication extends WebApplication {
     }
 
     protected void mountBlogPage() {
-        mountPage("/blog", BlogPage.class);
+        mountPage("/entries", RecentEntriesPage.class);
+        mountPage("/post", PostEntryPage.class);
     }
 
 }

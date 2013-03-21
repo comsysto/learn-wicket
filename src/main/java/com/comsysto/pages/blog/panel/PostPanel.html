@@ -5,30 +5,42 @@
 
         <wicket:panel>
 
-            <div class="feat-img span2">
-                <img src="http://lorempixel.com/350/325/sports/2" title="featured image" alt="an image was here"/>
-            </div>
-
-            <div class="details span6">
-
+            <div class="post">
                 <h2 wicket:id="title">Just a Nice Post!</h2>
 
+                <!--
+                <div class="metadata">
+                    <wicket:enclosure child="editLink"><a wicket:id="editLink" class="post-edit-link">&gt;&gt; edit &lt;&lt;</a></wicket:enclosure><br/>
+                    posted on <span wicket:id="created">[created]</span><br/>
+                    by <em wicket:id="user">[user]</em><br/>
+                </div>
+                -->
                 <div wicket:id="date_user">24.2.2013 by Jack the User</div>
 
                 <div>Tags: <span wicket:id="category"/></div>
 
-                <p wicket:id="excerpt">
+                <p wicket:id="content">
                     Lorem ipsum pariatur velit pariatur dolore aliqua voluptate sed Duis dolor ea cillum qui
                     anim consequat quis sunt ex eu culpa veniam nisi nulla non dolor esse sit aliquip irure
                     in amet reprehenderit quis voluptate occaecat in enim Duis.Aliqua voluptate sed Duis dolor
                     ea cillum qui anim consequat quis sunt ex eu culpa veniam nisi nulla non dolor esse sit
                     aliquip irure in amet reprehenderit quis voluptate occaecat in enim Duis.
                 </p>
+
             </div>
 
-            <a wicket:id="post_entry" class="btn pull-right" href="#">
-                <wicket:message key="post.excerpt.button.readMore"/>
-            </a>
+            <div wicket:id="commentForm"> Comment Form here</div>
+
+            <div class="commentContainer">
+
+                COMMENTS ...
+                <!--
+                <div wicket:id="comments">
+                    <a wicket:id="url">[url with name]</a> posted on <span wicket:id="created">[timestamp]</span><a wicket:id="deleteComment"><img src="img/icons/comment_delete.png"/></a>
+                    <span wicket:id="content">[text]</span>
+                </div>
+                -->
+            </div>
 
         </wicket:panel>
 

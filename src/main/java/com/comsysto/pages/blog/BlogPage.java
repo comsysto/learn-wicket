@@ -1,25 +1,44 @@
 package com.comsysto.pages.blog;
 
-import com.comsysto.pages.blog.panel.RecentPostsPanel;
+import com.comsysto.WicketApplication;
+import com.comsysto.domain.Post;
+import org.apache.wicket.Component;
+import org.apache.wicket.RestartResponseException;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.link.Link;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 import java.util.Locale;
 
 /**
  * @author sekibomazic
  */
-public class BlogPage extends WebPage {
+public abstract class BlogPage extends WebPage {
 
     public BlogPage() {
+        initPage();
+    }
 
+    public BlogPage(PageParameters parameters) {
+        super(parameters);
+        checkParameters(parameters);
+        initPage();
+    }
+
+    @Override
+    public void onInitialize() {
+        super.onInitialize();
+
+        add(getContent("content"));
+    }
+
+    private void initPage() {
         getSession().setLocale(Locale.UK);
 
         germanLink();
         englishLink();
-
-        content();
     }
+
 
     private void englishLink() {
         add(new Link("english") {
@@ -42,9 +61,23 @@ public class BlogPage extends WebPage {
         });
     }
 
-    private void content() {
-        add(new RecentPostsPanel("content"));
+    protected void checkParameters(PageParameters params) {
+        // there must at least be one parameter denoting the blog
+        if (params.isEmpty()) {
+            throw new RestartResponseException(WicketApplication.get().getHomePage());
+        }
     }
 
+    public static PageParameters constructPostEntryPageParameters(Post post) {
+        PageParameters params = new PageParameters();
+
+        if (post != null) {
+            params.add("id", post.getId());
+        }
+
+        return params;
+    }
+
+    public abstract Component getContent(String id);
 
 }
