@@ -33,13 +33,16 @@
 
             <div class="commentContainer">
 
-                COMMENTS ...
-                <!--
                 <div wicket:id="comments">
-                    <a wicket:id="url">[url with name]</a> posted on <span wicket:id="created">[timestamp]</span><a wicket:id="deleteComment"><img src="img/icons/comment_delete.png"/></a>
-                    <span wicket:id="content">[text]</span>
+                    <pre class="commenthead" wicket:id="name_time">[name]</pre>
+
+                    <!--
+                    <a wicket:id="deleteComment"><img src="img/icons/comment_delete.png"/></a>
+                    -->
+
+                    <div class="comment" wicket:id="content">[text]</div>
                 </div>
-                -->
+
             </div>
 
         </wicket:panel>
